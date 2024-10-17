@@ -5,7 +5,7 @@
 <img  src="https://readme-typing-svg.herokuapp.com?color=45ffaa&size=40&width=900&height=80&lines=Welcome-to-TOURGUIDE"/>
 </center>
    
-![image](https://github.com/avanimathur/Travel_Website/assets/151984867/1024d506-92c6-4b35-a4ab-2d4eaca78199)
+![image](https://github.com/DNXEMPIRE-1/TravelWebsite/assets/151984867/1024d506-92c6-4b35-a4ab-2d4eaca78199)
 
 
  <div align="center">
@@ -15,7 +15,7 @@
  <h2>Hi there👋, Enjoy the World of Open source contribution </h2>
 
 
-<p>Hello Coders!!👨‍💻<br> I am Arpan Chowdhury, an aspiring Web developer🤖. Here is the project on front-end Web Development.</p>
+<p>Hello Coders!!👨‍💻<br> I am Dennis Nzioki, an aspiring Web developer🤖. Here is the project on front-end Web Development.</p>
 
 
 
@@ -62,7 +62,7 @@
 
 ## How to make a Pull Request?
 
-**1.** Start by forking the [**Travel_Website**](https://github.com/apu52/Travel_Website) repository. Click on the <a href="https://github.com/apu52/Travel_Website/fork"><img src="https://i.imgur.com/G4z1kEe.png" height="21" width="21"></a> symbol at the top right corner.
+**1.** Start by forking the [**Travel_Website**](https://github.com/DNXEMPIRE-1/TravelWebsite) repository. Click on the <a href="https://github.com/DNXEMPIRE-1/TravelWebsite/fork"><img src="https://i.imgur.com/G4z1kEe.png" height="21" width="21"></a> symbol at the top right corner.
 
 **2.** Clone your forked repository:
 
@@ -145,7 +145,7 @@ To learn about our development process, how to propose bug fixes and improvement
 
 <h2>Code Of Conduct📑</h2>
 
-This project and everyone participating in it are governed by the [Code of Conduct](https://github.com/apu52/Travel_Website/blob/main/Code_of_conduct.md). By participating, you are expected to uphold this code.
+This project and everyone participating in it are governed by the [Code of Conduct](https://github.com/DNXEMPIRE-1/TravelWebsite/blob/main/Code_of_conduct.md). By participating, you are expected to uphold this code.
 
 </br>
 <p align = "center">
