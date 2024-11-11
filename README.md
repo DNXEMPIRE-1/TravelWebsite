@@ -12,7 +12,7 @@
 
  </div>
 
- <h2>Hi there👋, Enjoy the World of Open source contribution </h2>
+ <h2>Hi there👋, Enjoy the World</h2>
 
 
 <p>Hello Coders!!👨‍💻<br> I am Dennis Nzioki, an aspiring Web developer🤖. Here is the project on front-end Web Development.</p>
