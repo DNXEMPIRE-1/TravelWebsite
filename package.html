@@ -94,7 +94,7 @@
   <link rel="stylesheet" href="./Image-Gallery/style.css">
   <title>Arpan Codes | Tourguide</title>
   <!-- adding a fav-icon -->
-  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <script src="index.js"></script>
 
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
@@ -164,118 +164,128 @@
       <div class="filter-search">
         <select class="price-filter" id="priceFilter" onchange="filterProducts()">
           <option value="">All Prices</option>
-        <option value="400">Below $400</option>
-        <option value="500">Below $500</option>
-        <!-- Add more options as needed -->
-      </select>
-      
-      <!-- search button html -->
-      <form onsubmit="search(event)" class="search-bar"> 
-        <input type="text" id ="find" placeholder="search places" onkeyup="search()" name="q">
-        <button type="submit" value="search" ><b>GO!</b></button>
-      </form>
-    </div>
-    <h2 id="noResults" style="display: none;" ><b>NO RESULTS FOUND</b> <img src="notFound.jpg" ></h2>
-    <!-- search styling -->
-    <style>
-      .filter-search {
-      display: flex;
-      align-items: center; 
-}
-      .price-filter {
-    display: flex;
-    align-items: center; /* Align items vertically */
-    justify-content: center; /* Align items horizontally */
-    position: relative; /* Change to relative positioning */
-    
-    margin-left: auto; /* Adjust margin */
-    padding: 0.5rem 1rem; /* Adjust padding */
-    border: 1px solid #ccc;
-    border-radius: 0.25rem; /* Adjust border radius */
-    background-color: #fcfdff;
-    color: #333;
-    font-size: 1rem; /* Adjust font size */
-}
+          <option value="400">Below $400</option>
+          <option value="500">Below $500</option>
+          <!-- Add more options as needed -->
+        </select>
 
-/* Optional: Add hover effects or additional styling */
-.price-filter:hover {
-    background-color: #f0f0f0;
-    border-color: #999;
-}
-
-
-      .search-bar{
-        width: 1500px;
-        height: 50%;
-        max-width: 400%;
-        background:rgba(0, 13, 79, 0.696);
-        display: flex;
-        align-items: center;
-        border-radius: 58px;
-        padding: 10px 10px;
-      }
-      .search-bar input{
-        background: rgb(255, 255, 255);
-        flex: 1;
-        border-radius: 60px;
-        outline: none;
-        padding: 10px 20px;
-        font-size: 15px;
-        color: #0c0c0c;
-      }
-      .search-bar button{
-        border: 0;
-        border-radius: 40%;
-        width: 50px;
-        height: 40px;
-        color: #0b0a0a;
-        font-size: small;
-        background:#ffffffb8;
-        cursor: pointer;
-      }
-    </style>
-
-     <!--javascript for functionality of search button-->
-     <script type="text/javascript">
-      function search(event){
-        event.preventDefault();
-        let filter = document.getElementById('find').value.toUpperCase();
-        let item = document.querySelectorAll('.trip__card');
-        let l = document.getElementsByTagName('p');
-        var found = false;
-        for(var i = 0; i < l.length; i++){
-          let a = item[i].getElementsByTagName('p')[0];
-          let value = a.innerHTML || a.innerText || a.textContent;
-          if(value.toUpperCase().indexOf(filter) > -1) {
-            item[i].style.display = "";
-            found = true;
-          }
-    else {
-      item[i].style.display = "none";
-      document.getElementById("noResults").style.display = found ? "none" : "block";
-    }
-    }
-   }
-</script>
-<!-- filter's functionality -->
-<script>
-function filterProducts() {
-    var priceFilter = document.getElementById('priceFilter').value;
-    var products = document.getElementsByClassName('trip__card');
-
-    for (var i = 0; i < products.length; i++) {
-        var productPrice = parseFloat(products[i].querySelector('.price').getAttribute('data-price'));
-        if (priceFilter === "" || productPrice <= parseFloat(priceFilter)) {
-            products[i].style.display = "block";
-        } else {
-            products[i].style.display = "none";
+        <!-- search button html -->
+        <form onsubmit="search(event)" class="search-bar">
+          <input type="text" id="find" placeholder="search places" onkeyup="search()" name="q">
+          <button type="submit" value="search"><b>GO!</b></button>
+        </form>
+      </div>
+      <h2 id="noResults" style="display: none;"><b>NO RESULTS FOUND</b> <img src="notFound.jpg"></h2>
+      <!-- search styling -->
+      <style>
+        .filter-search {
+          display: flex;
+          align-items: center;
         }
-    }
-}
-</script>
+
+        .price-filter {
+          display: flex;
+          align-items: center;
+          /* Align items vertically */
+          justify-content: center;
+          /* Align items horizontally */
+          position: relative;
+          /* Change to relative positioning */
+
+          margin-left: auto;
+          /* Adjust margin */
+          padding: 0.5rem 1rem;
+          /* Adjust padding */
+          border: 1px solid #ccc;
+          border-radius: 0.25rem;
+          /* Adjust border radius */
+          background-color: #fcfdff;
+          color: #333;
+          font-size: 1rem;
+          /* Adjust font size */
+        }
+
+        /* Optional: Add hover effects or additional styling */
+        .price-filter:hover {
+          background-color: #f0f0f0;
+          border-color: #999;
+        }
+
+
+        .search-bar {
+          width: 1500px;
+          height: 50%;
+          max-width: 400%;
+          background: rgba(0, 13, 79, 0.696);
+          display: flex;
+          align-items: center;
+          border-radius: 58px;
+          padding: 10px 10px;
+        }
+
+        .search-bar input {
+          background: rgb(255, 255, 255);
+          flex: 1;
+          border-radius: 60px;
+          outline: none;
+          padding: 10px 20px;
+          font-size: 15px;
+          color: #0c0c0c;
+        }
+
+        .search-bar button {
+          border: 0;
+          border-radius: 40%;
+          width: 50px;
+          height: 40px;
+          color: #0b0a0a;
+          font-size: small;
+          background: #ffffffb8;
+          cursor: pointer;
+        }
+      </style>
+
+      <!--javascript for functionality of search button-->
+      <script type="text/javascript">
+        function search(event) {
+          event.preventDefault();
+          let filter = document.getElementById('find').value.toUpperCase();
+          let item = document.querySelectorAll('.trip__card');
+          let l = document.getElementsByTagName('p');
+          var found = false;
+          for (var i = 0; i < l.length; i++) {
+            let a = item[i].getElementsByTagName('p')[0];
+            let value = a.innerHTML || a.innerText || a.textContent;
+            if (value.toUpperCase().indexOf(filter) > -1) {
+              item[i].style.display = "";
+              found = true;
+            }
+            else {
+              item[i].style.display = "none";
+              document.getElementById("noResults").style.display = found ? "none" : "block";
+            }
+          }
+        }
+      </script>
+      <!-- filter's functionality -->
+      <script>
+        function filterProducts() {
+          var priceFilter = document.getElementById('priceFilter').value;
+          var products = document.getElementsByClassName('trip__card');
+
+          for (var i = 0; i < products.length; i++) {
+            var productPrice = parseFloat(products[i].querySelector('.price').getAttribute('data-price'));
+            if (priceFilter === "" || productPrice <= parseFloat(priceFilter)) {
+              products[i].style.display = "block";
+            } else {
+              products[i].style.display = "none";
+            }
+          }
+        }
+      </script>
 
       <!-- end of search button -->
-        
+
       <div class="trip__grid">
 
         <div class="trip__card">
@@ -296,7 +306,7 @@ function filterProducts() {
             <p>Machu Picchu ,Peru</p>
             <div class="rating"><i class="ri-star-fill"></i> 4.5</div>
             <div class="booking__price">
-              <div class="price"id="filter" data-price="450"><span>From</span> $450</div>
+              <div class="price" id="filter" data-price="450"><span>From</span> $450</div>
               <a href="./dedicated-destinations/machu-picchu-peru/Machu_start.html"><button class="book__now">Book
                   Now</button></a>
             </div>
@@ -331,7 +341,7 @@ function filterProducts() {
             <p>Dubai</p>
             <div class="rating"><i class="ri-star-fill"></i> 4.5</div>
             <div class="booking__price">
-              <div class="price"id="filter" data-price="450"><span>From</span> $450</div>
+              <div class="price" id="filter" data-price="450"><span>From</span> $450</div>
               <a href="./dedicated-destinations/dubai/start.html"><button class="book__now">Book Now</button></a>
             </div>
           </div>
@@ -436,41 +446,41 @@ function filterProducts() {
       <div class="footer__col">
         <div class="footer__area">
           <h4>Support</h4>
-        <p><a href="./faq.html">FAQs</a></p>
-        <p><a href="./tnc.html">Terms & Conditions</a></p>
-        <p><a href="./privacy.html">Privacy Policy</a></p>
-        <p><a href="index.html#cnt-form">Contact Us</a></p>
+          <p><a href="./faq.html">FAQs</a></p>
+          <p><a href="./tnc.html">Terms & Conditions</a></p>
+          <p><a href="./privacy.html">Privacy Policy</a></p>
+          <p><a href="index.html#cnt-form">Contact Us</a></p>
         </div>
       </div>
       <div class="footer__col">
         <div class="footer__area">
-        <h4>Address</h4>
-        <p>
-          <span>Address:</span> 3/2 Wellington Street, Kolkata , West Bengal , India
-        </p>
-        <span>Email:</span><a href="mailto:tour@tourguide.com">tour@tourguide.com</a></p>
-          <p><span>Phone:</span><a href="tel:8562145852">+91 8562145852</a></p>
-      </div>
+          <h4>Address</h4>
+          <p>
+            <span>Address:</span> 3/2 Wellington Street, Kolkata , West Bengal , India
+          </p>
+          <span>Email:</span><a href="mailto:tour@tourguide.com">tour@tourguide.com</a></p>
+          <p><span>Phone:</span><a href="tel:8562145852">+254 717783146</a></p>
+        </div>
       </div>
     </div>
     <div class="footer__bar">
-      Copyright © 2023 Arpan Chowdhury. All rights reserved.
+      Copyright © 2023 DNX EMPIRE. All rights reserved.
     </div>
   </footer>
 
   <button class="top-btn" id="goToTopBtn" onclick="goToTop()"><i class="fa-solid fa-chevron-up"
       style="color: #ffffff;"></i></button>
 
-      <!--SIDE POP UP DISCOUNT-->
-      <div class="popup" id="popup">
-        <span class="close-btn" id="close-btn"> &times;</span>
-        <p class="pop_up_heading">Unlock Your Exclusive Discount!</p>
-        <p class="pop_up_content">Enter the code <strong>DISCOUNT10</strong> to receive 10% off your first trip package!</p>
-        <form id="signup-form">
-          <input type="email" id="email" name="email" placeholder="                  email address" required>
-          <button type="submit">Sign Up Now</button>
-        </form>
-      </div>
+  <!--SIDE POP UP DISCOUNT-->
+  <div class="popup" id="popup">
+    <span class="close-btn" id="close-btn"> &times;</span>
+    <p class="pop_up_heading">Unlock Your Exclusive Discount!</p>
+    <p class="pop_up_content">Enter the code <strong>DISCOUNT10</strong> to receive 10% off your first trip package!</p>
+    <form id="signup-form">
+      <input type="email" id="email" name="email" placeholder="                  email address" required>
+      <button type="submit">Sign Up Now</button>
+    </form>
+  </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
     integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
@@ -514,7 +524,7 @@ function filterProducts() {
 
     tl.from(".footer", {
       opacity: 0,
-      x:-50,
+      x: -50,
       duration: 0.7,
     })
 
@@ -595,15 +605,15 @@ function filterProducts() {
   }
 </script>
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  setTimeout(function() {
-    document.getElementById('popup').style.display = 'block';
-  }, 5000); 
+  document.addEventListener('DOMContentLoaded', function () {
+    setTimeout(function () {
+      document.getElementById('popup').style.display = 'block';
+    }, 5000);
 
-  document.getElementById('close-btn').addEventListener('click', function() {
-    document.getElementById('popup').style.display = 'none';
+    document.getElementById('close-btn').addEventListener('click', function () {
+      document.getElementById('popup').style.display = 'none';
+    });
   });
-});
 </script>
 <script src="./Image-Gallery/script.js"></script>
 
